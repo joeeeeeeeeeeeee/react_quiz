@@ -20,9 +20,14 @@ class App extends React.Component {
     this.handleAnswerChange = this.handleAnswerChange.bind(this);
     this.endOfQuiz = this.endOfQuiz.bind(this);
     this.reset = this.reset.bind(this);
+    this.resetButtonClicked = this.resetButtonClicked.bind(this);
   }
   reset() {
     this.setState(initialState);
+  }
+  resetButtonClicked(e){
+    e.preventDefault();
+    this.reset();
   }
   buttonClicked(e) {
     e.preventDefault();
@@ -150,7 +155,7 @@ class App extends React.Component {
           <h2 className="display-1 jumbotron bg-light">{this.state.grade}</h2>
           <button type="submit"
           className="btn btn-info"
-          onClick={this.reset}>
+          onClick={this.resetButtonClicked}>
             Take the quiz again?
           </button>
         </form>
