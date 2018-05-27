@@ -2,7 +2,7 @@
   "name": "react_quiz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/joeeeeeeeeeeeee/react_quiz",
+  "homepage": "https://joeeeeeeeeeeeee.github.io/react_quiz/",
   "dependencies": {
     "ajv": "^6.5.0",
     "bootstrap": "^4.0.0-beta.2",
