@@ -207,7 +207,7 @@ export const QUESTIONS = [
     failureMessage : `Incorrect. I'm not giving you the answer either`
   },
   {
-    question: "Penultimate question. How many of these question are about questions?",
+    question: "Last question. How many of these question are about questions?",
     answers:[
       {
         correct: false,
@@ -230,7 +230,7 @@ export const QUESTIONS = [
     failureMessage : `Incorrect. This question is included`
   },
   {
-    question: "Last question. Where are the eyelets of langerhans?",
+    question: "Bonus (not included) question. Where are the eyelets of langerhans?",
     answers:[
       {
         correct: false,
