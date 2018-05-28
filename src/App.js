@@ -5,7 +5,7 @@ const initialState = {
   questionNo: 1,
   questionAnswered: false,
   correct: false,
-  selctedAnswer: "1",
+  selectedAnswer: "1",
   hideFailureMessage: true,
   hideSuccessMessage: true,
   score: 0,
@@ -13,8 +13,8 @@ const initialState = {
   grade: "Unicorn"
 }
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = initialState;
     this.buttonClicked = this.buttonClicked.bind(this);
     this.handleAnswerChange = this.handleAnswerChange.bind(this);
@@ -33,7 +33,7 @@ class App extends React.Component {
       this.setState({
         questionAnswered: true
       });
-      if (QUESTIONS[this.state.questionNo -1].answers[this.state.selctedAnswer - 1].correct === true){
+      if (QUESTIONS[this.state.questionNo -1].answers[this.state.selectedAnswer - 1].correct === true){
         this.setState({
           correct: true,
           hideSuccessMessage: false,
@@ -52,7 +52,7 @@ class App extends React.Component {
         this.setState({
           questionNo: this.state.questionNo + 1,
           questionAnswered: false,
-          selctedAnswer: "1",
+          selectedAnswer: "1",
           hideSuccessMessage: true,
           hideFailureMessage: true,
         });
@@ -61,7 +61,7 @@ class App extends React.Component {
   }
   handleAnswerChange(e){
     this.setState({
-      selctedAnswer: e.currentTarget.value,
+      selectedAnswer: e.currentTarget.value,
     });
   }
   endOfQuiz(){
@@ -96,7 +96,7 @@ class App extends React.Component {
             <label className="form-check-label">
               <input type="radio" className="form-check-input" name="answer"
               value="1"
-              checked={this.state.selctedAnswer === "1"}
+              checked={this.state.selectedAnswer === "1"}
               disabled={this.state.questionAnswered}
               onChange={this.handleAnswerChange}
                />{QUESTIONS[this.state.questionNo -1].answers[0].content}
@@ -106,7 +106,7 @@ class App extends React.Component {
             <label className="form-check-label">
               <input type="radio" className="form-check-input" name="answer"
               value="2"
-              checked={this.state.selctedAnswer === "2"}
+              checked={this.state.selectedAnswer === "2"}
               disabled={this.state.questionAnswered}
               onChange={this.handleAnswerChange}
                />{QUESTIONS[this.state.questionNo -1].answers[1].content}
@@ -116,7 +116,7 @@ class App extends React.Component {
             <label className="form-check-label">
               <input type="radio" className="form-check-input" name="answer"
               value="3"
-              checked={this.state.selctedAnswer === "3"}
+              checked={this.state.selectedAnswer === "3"}
               disabled={this.state.questionAnswered}
               onChange={this.handleAnswerChange}
                />{QUESTIONS[this.state.questionNo -1].answers[2].content}
@@ -126,7 +126,7 @@ class App extends React.Component {
             <label className="form-check-label">
               <input type="radio" className="form-check-input" name="answer"
               value="4"
-              checked={this.state.selctedAnswer === "4"}
+              checked={this.state.selectedAnswer === "4"}
               disabled={this.state.questionAnswered}
               onChange={this.handleAnswerChange}
                />{QUESTIONS[this.state.questionNo -1].answers[3].content}
