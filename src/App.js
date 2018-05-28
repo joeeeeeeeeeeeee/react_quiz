@@ -18,8 +18,6 @@ class App extends React.Component {
     this.state = initialState;
     this.buttonClicked = this.buttonClicked.bind(this);
     this.handleAnswerChange = this.handleAnswerChange.bind(this);
-    this.endOfQuiz = this.endOfQuiz.bind(this);
-    this.reset = this.reset.bind(this);
     this.resetButtonClicked = this.resetButtonClicked.bind(this);
   }
   reset() {
